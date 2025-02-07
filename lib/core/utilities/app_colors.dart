@@ -7,4 +7,5 @@ class AppColors{
   static const Color grey = Color(0xff878787);
   static const Color red = Colors.red;
   static const Color borderTextFieldColor = Color(0xffD6D6D6);
+  static const Color nonActiveDotsIndicator = Color(0xffC2C2C2);
 }
