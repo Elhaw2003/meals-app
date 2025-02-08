@@ -23,7 +23,7 @@ class CustomSliderWidget extends StatelessWidget {
             );
           }).toList(),
           options: CarouselOptions(
-            height: 250.h,
+            height: 230.h,
             viewportFraction: .98,
             autoPlayCurve: Curves.fastOutSlowIn,
             enlargeCenterPage: true,
