@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meals_app/core/routes/router_generation_config.dart';
+import 'package:meals_app/features/onboarding/data/services/onboarding_sevices.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+ await OnboardingServices.initializeSharedPreferenceStorage();
   runApp(const MealsApp());
 }
 
