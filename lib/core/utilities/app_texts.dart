@@ -9,4 +9,5 @@ class AppTexts{
   static const String next = "Next";
   static const String skip = "Skip";
   static const String yourFood = "Your Food";
+  static const String noMeals = "No Meals Found";
 }
