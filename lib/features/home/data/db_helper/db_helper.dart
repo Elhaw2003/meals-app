@@ -52,4 +52,27 @@ class DatabaseHelper {
     }).toList();
     return meals;
   }
+  Future<void> deleteMealByIndex(int index) async {
+    final db = await database;
+
+    // استرجاع جميع الوجبات مرتبة حسب الـ id
+    List<Map<String, dynamic>> meals = await db.query(
+      'meals',
+      orderBy: 'id ASC', // ترتيب تصاعدي حسب الـ ID
+    );
+
+    // التحقق من أن الرقم المطلوب داخل النطاق
+    if (index >= 0 && index < meals.length) {
+      int mealId = meals[index]['id']; // الحصول على ID للعنصر المطلوب
+
+      // حذف العنصر من قاعدة البيانات
+      await db.delete(
+        'meals',
+        where: 'id = ?',
+        whereArgs: [mealId],
+      );
+    } else {
+      print("⚠️ لا يوجد عنصر بهذا الترتيب!");
+    }
+  }
 }

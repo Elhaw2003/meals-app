@@ -1,8 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meals_app/core/utilities/app_styles.dart';
 import 'package:meals_app/core/widgets/loading_widget.dart';
-import 'package:meals_app/features/home/data/models/item_model.dart';
 import 'package:meals_app/features/home/presentation/view/widgets/grid_view_widget.dart';
 import 'package:meals_app/features/home/presentation/view/widgets/your_food_widget.dart';
 import '../../../../../core/utilities/app_colors.dart';
@@ -32,6 +33,7 @@ class HomeBody extends StatelessWidget {
                 if(snapshot.connectionState == ConnectionState.waiting){
                   return const LoadingWidget();
                 }else if (snapshot.hasData){
+                  log("length ${snapshot.data!.length}");
                   if(snapshot.data!.isEmpty){
                     return  Center(child: Text(AppTexts.noMeals,style: AppTextStyles.onboardingTextStyle.copyWith(color: AppColors.primaryColor),));
                   }

@@ -20,9 +20,11 @@ class MealsApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return  MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          routerConfig: RouterGenerationConfig.goRouter,
+        return  SafeArea(
+          child: MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            routerConfig: RouterGenerationConfig.goRouter,
+          ),
         );
       },
     );
