@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:meals_app/core/widgets/loading_widget.dart';
 import 'package:meals_app/features/home/data/models/item_model.dart';
 import '../../../../../core/utilities/app_colors.dart';
 import '../../../../../core/utilities/app_styles.dart';
@@ -20,7 +21,7 @@ class ItemWidget extends StatelessWidget {
             height: 106.h,
             width: 137.w,
             imageUrl: meal.imageUrl,
-            placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+            placeholder: (context, url) => const LoadingWidget(),
             errorWidget: (context, url, error) => const Icon(Icons.error,color: AppColors.red,),
           ),
         ),

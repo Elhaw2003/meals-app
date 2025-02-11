@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meals_app/core/utilities/app_styles.dart';
+import 'package:meals_app/core/widgets/loading_widget.dart';
 import 'package:meals_app/features/home/data/models/item_model.dart';
 import 'package:meals_app/features/home/presentation/view/widgets/grid_view_widget.dart';
 import 'package:meals_app/features/home/presentation/view/widgets/your_food_widget.dart';
@@ -29,7 +30,7 @@ class HomeBody extends StatelessWidget {
               future:dataBaseHelper.getMeals() ,
               builder: (context, snapshot) {
                 if(snapshot.connectionState == ConnectionState.waiting){
-                  return const Center(child: CircularProgressIndicator());
+                  return const LoadingWidget();
                 }else if (snapshot.hasData){
                   if(snapshot.data!.isEmpty){
                     return  Center(child: Text(AppTexts.noMeals,style: AppTextStyles.onboardingTextStyle.copyWith(color: AppColors.primaryColor),));

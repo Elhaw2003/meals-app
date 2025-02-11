@@ -9,7 +9,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return   const Scaffold(
       body: HomeBody(),
-      floatingActionButton: FloatingActionWidget(),
+      floatingActionButton:
+      FloatingActionWidget(
+      ),
     );
   }
 }

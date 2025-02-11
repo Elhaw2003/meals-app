@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/app_routes.dart';
 import '../../../../../core/utilities/app_colors.dart';
 
 class FloatingActionWidget extends StatelessWidget {
@@ -19,7 +20,9 @@ class FloatingActionWidget extends StatelessWidget {
           backgroundColor: AppColors.white,
           foregroundColor: AppColors.primaryColor,
           child: Icon(Icons.add,size: 35.sp,),
-          onPressed: (){}
+          onPressed: (){
+            GoRouter.of(context).pushNamed(AppRoutes.addMealScreen);
+          }
       ),
     );
   }
