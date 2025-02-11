@@ -11,7 +11,7 @@ class RowRateTimeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding:  EdgeInsets.all(10.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.sp),
         color: AppColors.primaryColor.withOpacity(0.04),

@@ -35,7 +35,7 @@ class ItemMealDetailsBody extends StatelessWidget {
           Text(
             meal.description,
             style: AppTextStyles.greyW400Size14,
-          )
+          ),
         ],
       ),
     );

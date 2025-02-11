@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../utilities/app_colors.dart';
 
@@ -23,7 +24,7 @@ class CustomArrowBackWidget extends StatelessWidget {
         ),
         child: IconButton(
           onPressed: (){
-            Navigator.pop(context);
+            GoRouter.of(context).pop();
           },
           icon:  Icon(Icons.arrow_back_ios_new,size: 17.sp,color: iconColor,),
         ),

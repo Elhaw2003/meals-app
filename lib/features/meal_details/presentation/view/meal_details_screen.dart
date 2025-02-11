@@ -8,7 +8,7 @@ class MealDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MealDetailsBody(meal: meal),
+      body: SingleChildScrollView(child: MealDetailsBody(meal: meal)),
     );
   }
 }
