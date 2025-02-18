@@ -15,6 +15,7 @@ class GridViewWidget extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 30.h,
           crossAxisSpacing: 25.w,
+          childAspectRatio: 0.8
       ),
       itemBuilder: (context, index) {
         return  ItemWidget( meal: snapshot.data![index],);

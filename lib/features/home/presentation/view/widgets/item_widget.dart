@@ -19,6 +19,7 @@ class ItemWidget extends StatelessWidget {
         GoRouter.of(context).pushNamed(AppRoutes.mealDetailsScreen,extra: meal);
       },
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
@@ -37,7 +38,7 @@ class ItemWidget extends StatelessWidget {
           ),
           const HeightSpacing(height: 8),
           Text(
-            meal.name,
+            "namevvvvhvhghghhjhf",
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: AppTextStyles.blackW600Size16,
