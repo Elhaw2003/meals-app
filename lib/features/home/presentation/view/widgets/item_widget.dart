@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meals_app/core/widgets/custom_icon_widget.dart';
 import 'package:meals_app/core/widgets/custom_row_icon_time_rate_widget.dart';
 import 'package:meals_app/core/widgets/loading_widget.dart';
 import 'package:meals_app/features/home/data/models/item_model.dart';

@@ -10,8 +10,8 @@ class FloatingActionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60,
-      height: 60,
+      // width: 60.w,
+      // height: 60.h,
       child: FloatingActionButton(
           shape:RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100.sp),
